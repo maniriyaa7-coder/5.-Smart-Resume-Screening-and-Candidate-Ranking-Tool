@@ -1,0 +1,97 @@
+# ============================================================
+# RecruitAI — Root .gitignore (Next.js Frontend + Monorepo)
+# Package Manager: pnpm
+# ============================================================
+
+# ─── Dependencies ────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ─── Lock files: keep pnpm-lock.yaml, ignore npm's lock ──────
+# (project uses pnpm — package.json has "pnpm" overrides key)
+package-lock.json
+
+# ─── Next.js Build Output ────────────────────────────────────
+.next/
+out/
+
+# ─── General Build / Cache Artifacts ─────────────────────────
+dist/
+build/
+.cache/
+.turbo/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# ─── Environment Files ───────────────────────────────────────
+# Keep: .env.example (safe template with no real values)
+# Ignore: all files with actual secrets
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.test
+.env*.local
+!.env.example
+
+# ─── Logs ────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ─── Runtime / Upload Data ───────────────────────────────────
+# Backend uploads dir is handled by backend/.gitignore
+# but protect from root too
+backend/uploads/resumes/*.pdf
+backend/uploads/resumes/*.docx
+backend/uploads/resumes/*.doc
+backend/uploads/resumes/*.txt
+# Keep .gitkeep placeholder file
+!backend/uploads/resumes/.gitkeep
+
+# ─── OS Files ────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ─── IDE / Editor ────────────────────────────────────────────
+.vscode/*
+# Keep workspace recommended extensions if you add them later:
+# !.vscode/extensions.json
+# !.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─── v0 / Vercel Sandbox Internal Files ──────────────────────
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.snowflake/
+.v0-trash/
+.vercel/
+
+# ─── Misc ────────────────────────────────────────────────────
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+.env.vault
