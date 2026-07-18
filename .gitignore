@@ -86,6 +86,7 @@ __v0_devtools.tsx
 __v0_jsx-dev-runtime.ts
 .snowflake/
 .v0-trash/
+# Only ignore the local Vercel CLI cache dir, NOT vercel.json
 .vercel/
 
 # ─── Misc ────────────────────────────────────────────────────
