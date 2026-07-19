@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Production-ready authentication backend for RecruitAI",
   "main": "src/server.js",
+  "packageManager": "npm@11.6.2",
   "type": "module",
   "scripts": {
     "start": "node src/server.js",
